@@ -1,18 +1,18 @@
 #!/bin/bash
 name=netool
-ver0=bookworm-20231218-slim
-ver1=bookworm-slim
-ver2=12-slim
+ver0=bookworm-20251117-slim
+ver1=12-slim
 
-#登录镜像仓库
-echo ${DOCKER_HUB_KEY} | docker login --username ${DOCKER_HUB_USER} --password-stdin
+export DOCKER_CLI_EXPERIMENTAL=enabled
+export DOCKER_BUILDKIT=1
+
 #构建镜像
 docker buildx build \
   --platform linux/amd64,linux/arm64 \
-  --build-arg VER=${ver1} \
-  --build-arg HTTP_PROXY=http://10.10.10.41:1083 \
-  --build-arg HTTPS_PROXY=http://10.10.10.41:1083 \
+  --build-arg VER=${ver0} \
   --push \
   --tag sorc/${name}:${ver0} \
   --tag sorc/${name}:${ver1} \
-  --tag sorc/${name}:${ver2} .
+  --tag sorc/${name}:latest .
+
+
