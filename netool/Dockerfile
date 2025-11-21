@@ -1,6 +1,9 @@
 # syntax = docker/dockerfile:experimental
 ARG VER
 FROM debian:${VER}
+LABEL author=sorc@sction.org
+ARG TARGETOS
+ARG TARGETARCH
 ENV TZ=Asia/Shanghai
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 RUN apt-get update && \
