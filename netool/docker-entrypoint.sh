@@ -19,15 +19,14 @@ if [ "$TYPE" == "server" ];then
   echo "start server ... "
   echo "-r $WSTUNNEL_RESTRICT_HTTP_UPGRADE_PATH_PREFIX"
   wst server $SERVER_URL
-else if [ "$TYPE" == "client" ];then
+elif [ "$TYPE" == "client" ];then
   echo "start client ... "
   echo "-$CLIENT_TYPE $CLIENT_MAPPING"
   echo "-P $WSTUNNEL_HTTP_UPGRADE_PATH_PREFIX"
   echo "-H $HTTP_HEADERS"
-  wst client -$CLIENT_TYPE '$CLIENT_MAPPING' -H '$HTTP_HEADERS' $SERVER_URL
+  wst client -$CLIENT_TYPE "$CLIENT_MAPPING" -H "$HTTP_HEADERS" $SERVER_URL
 else
   echo "sleep $SLEEP_TIME sec "
   /bin/bash -c sleep $SLEEP_TIME
 fi
-
 
