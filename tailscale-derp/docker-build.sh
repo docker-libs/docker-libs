@@ -3,7 +3,7 @@ name=tailscale-derp
 ver=$1
 build_date=`date +"%Y%m%d"`
 if [ -z "${ver}" ] ;then
-  ver=1.82.5
+  ver=1.90.9
 fi
 echo ${ver}_${build_date}
 export DOCKER_CLI_EXPERIMENTAL=enabled
