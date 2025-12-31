@@ -1,0 +1,32 @@
+# 数学科学计算
+numpy
+scipy
+pandas
+sympy
+statsmodels
+
+# 图像处理
+Pillow
+scikit-image
+opencv-python
+matplotlib
+
+# 大数据
+pyspark
+dask
+pyarrow
+
+# 文件处理
+PyPDF2
+python-docx
+openpyxl
+python-pptx
+
+# 数据处理
+lxml
+beautifulsoup4
+xmltodict
+
+# HTTP请求
+requests
+httpx
