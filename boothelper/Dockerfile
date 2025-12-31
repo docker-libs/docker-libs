@@ -1,7 +1,7 @@
-ARG JAVA_VER
-ARG FULL_VERSION
+ARG JAVA_VER=8u342-slim-bullseye
 FROM openjdk:${JAVA_VER}
-MAINTAINER sorc@qq.com
+LABEL maintainer="MAINTAINER sorc@qq.com"
+ARG FULL_VERSION=8u342-slim-bullseye-20251231
 ENV TZ=Asia/Shanghai RUNCMD= RUNARGS= VERSION=${FULL_VERSION}
 ADD files/ /
 RUN chmod +x /docker-entrypoint.sh && \
