@@ -8,13 +8,7 @@ statsmodels
 # 图像处理
 Pillow
 scikit-image
-opencv-python
 matplotlib
-
-# 大数据
-pyspark
-dask
-pyarrow
 
 # 文件处理
 PyPDF2
