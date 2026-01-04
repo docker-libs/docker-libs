@@ -1,13 +1,10 @@
 # 数学科学计算
 numpy
-scipy
 pandas
 sympy
-statsmodels
 
 # 图像处理
 Pillow
-scikit-image
 matplotlib
 
 # 文件处理
