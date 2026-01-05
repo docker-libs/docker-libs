@@ -12,8 +12,9 @@ RUN chmod +x /docker-entrypoint.sh && \
     echo "Asia/Shanghai" > /etc/timezone
 RUN apt update && \
     apt -y -f install curl wget telnet python3 python3-pip dnsutils traceroute inetutils-ping net-tools \
-    openssh-client iproute2 sysstat tcpdump mtr-tiny netcat-openbsd nmap
-RUN pip install -r /app/requirements.txt
+    openssh-client iproute2 sysstat tcpdump mtr-tiny netcat-openbsd nmap && \
+    rm -rf /var/lib/apt/lists/*
+RUN pip install --no-cache-dir -r /app/requirements.txt
 WORKDIR /app
 VOLUME /app
 CMD ["/docker-entrypoint.sh"]
