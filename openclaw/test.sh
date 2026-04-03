@@ -1,0 +1,1 @@
+docker run --rm -it --user root  sorc/openclaw:2026.4.2 /bin/bash
